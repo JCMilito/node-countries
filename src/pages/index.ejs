@@ -1,0 +1,50 @@
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<div class="margin"></div>    
+
+<div class="margin"></div>  
+
+<form action="/" method="get" class="search">
+    <input type="text" name="search" placeholder="Research Country">
+    <input type="submit" hidden>
+</form>
+
+<table>
+    <tr class="label">
+        <td class="name-column label">
+            Country
+        </td>
+        <td class="label">
+            Capital
+        </td>
+        <td class="label">
+            Region
+        </td>
+        <td class="label">
+            Flag
+        </td>
+    </tr>
+    <% for (var i=0; i < countries.length; i++) { 
+        var country = countries[i] %>
+        <tr>
+            <td class="name-column">
+                <%= country.name %>
+            </td>
+            <td>
+                <%= country.capital %>
+            </td>
+            <td>
+                <%= country.region %>
+            </td>
+            <td class="flag-column">
+                <img src="<%= country.flag %>" width="160px" height="80px">
+            </td>
+        </tr>
+        <% } %>
+</table>
+
+
+
+
+
+
