@@ -1,4 +1,3 @@
-import axios from 'axios';
 import express from 'express';
 import Country from './model/Country';
 import research from './util/Researcher';
